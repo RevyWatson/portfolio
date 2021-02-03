@@ -23,3 +23,68 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 I should be utilizing:
 flexbox, media queries, and CSS variables.*/
+
+:root {
+    --teal: teal;
+}
+
+* {
+    margin: 0;
+    background: lightblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+h1, h2, h3, header {
+    background-color: var(--teal);
+}
+
+h1 {
+    margin-left: 60px;
+}
+
+h2 {
+    margin-right: 60px;
+}
+
+h3 {
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 50px;
+}
+
+figure img {
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(2, 65, 65);
+}
+
+ul li {
+        list-style-type: none;
+}
+
+/* .header {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    background-color: var(--teal);
+} */
+
+.portrait {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
