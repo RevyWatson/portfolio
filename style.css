@@ -1,90 +1,244 @@
-/*use placeholder images and names
-WHEN I load their portfolio
-THEN I am presented with: 
-    -developer's name
-    -a recent photo
-    -links to sections about them
-    -their work
-    -and how to contact them
-WHEN I click one of the links in the navigation
-THEN the UI scrolls to the corresponding section
-
-WHEN I click on the link to the section about their work
-THEN the UI scrolls to a section with titled images of the developer's applications
-
-WHEN I am presented with the developer's first application
-THEN that application's image should be larger in size than the others
-
-WHEN I click on the images of the applications
-THEN I am taken to that deployed application
-
-WHEN I resize the page or view the site on various screens and devices
+/*WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 
-I should be utilizing:
-flexbox, media queries, and CSS variables.*/
+I should be utilizing: media queries*/
 
 :root {
-    --teal: teal;
+    /*color for about me section and corresponding link in header*/
+    --article: rgb(124, 75, 124);
+    /*color for text and image borders*/ 
+    --border-text: blanchedalmond;
+    /*color for gallery boxes and corresponding link in header*/
+    --gallery: purple;
+    /*color for contact section and corresponding link in header*/
+    --contact: rgb(211, 129, 231);
 }
 
 * {
     margin: 0;
-    background: lightblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+img {
+    border-radius: 20px;
+    border: solid 3px var(--border-text);
+    width: 100%;
 }
 
 body {
-    font-size: 16px;
+    color: var(--border-text);
+    background-color: rgb(15, 7, 37);
 }
 
 h1, h2, h3, header {
-    background-color: var(--teal);
+    text-align: center;
+    font-weight: bolder;
 }
 
-h1 {
-    margin-left: 60px;
-}
-
-h2 {
-    margin-right: 60px;
-}
-
-h3 {
-    padding: 30px;
-}
-
-header {
+.header {
     display: flex;
+    flex-direction: column;
+    margin-top: 20px;
     position: relative;
     box-sizing: border-box;
     justify-content: space-between;
-    flex-direction: row;
-    padding: 50px;
 }
 
-figure img {
-    border-radius: 10%;
-    border-style: solid;
-    border-width: 4px;
-    border-color: rgb(2, 65, 65);
+/*formating for nav all links in header*/
+.nav1 {
+    background-color: var(--article);
+}
+
+.nav2 {
+    background-color: var(--gallery);
+}
+
+.nav3 {
+    background: var(--contact);
+}
+
+/*formating for nav links 1-3 in header*/
+.nav1, .nav2, .nav3 {
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 30px;
+    color: var(--border-text);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*formating for text in bio-card2*/
+div p {
+    margin: 15px;
+}
+
+/* formating for project titles inside project cards */
+figcaption {
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*formatting for all thumbnail images in gallery*/
+.thumbnail {
+    width: 95%;
+    display: block;
+    display: flex;
+    flex-shrink: inherit;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*formating for place holder image in all about me section*/
+.self-portrait {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--border-text);
+}
+
+a:visited {
+    color: rgb(8, 44, 58);
+}
+
+/*enlarges project images and cards. Not ideal and ugly.*/
+a:hover {
+    color: rgb(153, 211, 208);
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    margin: 30px;
 }
 
 ul li {
         list-style-type: none;
+        font-weight: larger;
+    }
+
+/*formating for placeholder banner*/
+.banner {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    height: 450px;
+    background: center;
+    background-image: URL("placeholder_wide.jpg");
 }
 
-/* .header {
+/*container for all boxes*/
+.gallery {
+    margin: 0;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    background-color: var(--teal);
-} */
+    flex-direction: row;
+}
 
-.portrait {
-    position: relative;
+/*formatting for boxes 1-3*/
+.box1, .box2, .box3 {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--gallery);
+}
+
+/*formating for project-cards*/
+.project-card {
+    margin: 0;
     display: flex;
+    padding: 40px;
+    width: 500px;
+    color: var(--border-text);
+}
+
+.thumbnail:hover {
+    position: relative;
+    width:445px;
+    height:auto;
+    display:block;
+    z-index:999;
+}
+
+/*formatting for text inside gallery boxes 1-3*/
+figure p {
+    text-align: center;
+    margin: 41px;
+}
+
+/*container for all bio-cards*/
+article {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 3.5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 93%;
+    background-color: var(--article);
+    border-radius: 20px;
+    position: relative;
+}
+
+/*formatting for biocards 1 and 2*/
+.bio-card1 {
+    width: 25%;
+    padding: 4%;
+}
+
+.bio-card2 {
+    margin-left: 20px;
+    width: 75%;
+    padding: 6%;
+}
+
+.biocard1, .bio-card2 {
+    padding: 60px;
+    color: var(--border-text);
+}
+
+/*title and name in header*/
+.myname {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+/*container for contact info*/
+.contact {
+    background-color: var(--contact);
+    border-radius: 20px;
+    width: 93%;
+    display: flex;
+    flex-direction: row;
     box-sizing: border-box;
     justify-content: center;
-    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/*formating for contact content*/
+.con-card {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
