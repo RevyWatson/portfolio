@@ -1,7 +1,5 @@
 /*WHEN I resize the page or view the site on various screens and devices
-THEN I am presented with a responsive layout that adapts to my viewport
-
-I should be utilizing: media queries*/
+THEN I am presented with a responsive layout that adapts to my viewport = media queries*/
 
 :root {
     /*color for about me section and corresponding link in header*/
@@ -109,7 +107,6 @@ a:visited {
     color: rgb(8, 44, 58);
 }
 
-/*enlarges project images and cards. Not ideal and ugly.*/
 a:hover {
     color: rgb(153, 211, 208);
     -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -168,6 +165,7 @@ ul li {
     color: var(--border-text);
 }
 
+/*enlarges project images and cards. Not ideal and ugly.*/
 .thumbnail:hover {
     position: relative;
     width:445px;
