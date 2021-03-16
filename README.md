@@ -4,10 +4,15 @@ This is the first of many, many, many, drafts that I will inevitably be creating
 http://revywatson.github.io/portfolio/
 
 ![header-scrnsht](https://user-images.githubusercontent.com/76264693/107136576-a6746980-68d2-11eb-9ef3-ba5a5e081a0e.jpg)
-
-
 ![gallery-srnsht](https://user-images.githubusercontent.com/76264693/107136578-aaa08700-68d2-11eb-88d3-9bee1dcd886d.jpg)
 
+## Acceptance Criteria
+
+* The developer's name, a recent photo, and links to sections about them, their work, and how to contact them are present.
+* When the user clicks one of the links in the navigation the UI scrolls to the corresponding section.
+* When the user is presented with the developer's first application that application's image should be larger in size than the others.
+* When the user clicks on the images of the applications they are taken to that deployed application.
+* The application has responsive layout that functions on a normal webpage and mobile first devices.
 
 ## The Process and Current Product
 
